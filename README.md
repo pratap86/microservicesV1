@@ -8,7 +8,7 @@
 
 | Microservice Components | Port Used |
 | --- | --- |
-| `limit-service` | 8080 |
+| `limits-service` | 8080 |
 
 # HTTP Status Codes
 |LEVEL|MEASSAGE|
