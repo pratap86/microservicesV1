@@ -37,3 +37,5 @@
 | `500` | `INTERNAL SERVER ERROR` |
 | `502` | `BAD GATEWAY` |
 |`503`|`SERVICE UNAVAILABLE`|
+
+## Apache Camel Framework with Spring Boot
