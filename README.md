@@ -9,7 +9,7 @@
 | Microservice Components | Port Used |
 | --- | --- |
 | `Limits Microservice` | 8080, 8081, .. |
-|`Spring CLoud Config Server`<br>A Centralized Config Server|8888|
+|`Spring CLoud Config Server`<br><b>A Centralized Config Server</b>|8888|
 |`Currency Exchange Microservice`|8000, 8001, 8002, ..|
 |`Currency Conversion Microservice`|8100, 8101, 8102, ..|
 |`Netflix Eureka Naming Server`|8761|
