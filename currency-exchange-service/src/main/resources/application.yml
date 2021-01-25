@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: currency-exchange
+#data source
+  datasource:
+    url: jdbc:mysql://localhost:3306/testdb
+    username: pratap
+    password: pratap
+  jpa:
+    show-sql: true
+server:
+  servlet:
+    context-path: /currency-exchange/
+  port: 8000
+# Register with Eureka Naming Server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+#Resilience4j
+resilience4j:
+  retry:
+    instances:
+      sample-api:
+        max-attempts: 5
+        wait-duration: 1s
+        enable-exponential-backoff: true
+

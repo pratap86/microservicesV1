@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: limits-service
+# connect through config server
+  config:
+    import:
+    - optional:configserver:http://localhost:8888/
+# Activate profile
+  profiles:
+    active:
+    - dev
+  cloud:
+    config:
+      profile: dev
+server:
+  servlet:
+    context-path: /limit-service/
+  port: 8080
+

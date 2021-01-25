@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: api-gateway
+  #Enable the discovery locator feature, by default its false, get it through ApiGatewayConfiguration - defines custome routes
+  #cloud:
+   # gateway:
+    #  discovery:
+     #   locator:
+      #    enabled: true
+       #   lower-case-service-id: true
+#port
+server:
+  port: 8765
+#register with Eureka Naming Server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+      

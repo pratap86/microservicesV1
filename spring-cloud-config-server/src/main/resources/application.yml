@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: spring-cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: file:///c:/Users/naray/microservices/git-localconfig-repo	# connect through Git
+server:
+  port: 8888
