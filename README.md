@@ -2,7 +2,7 @@
 
 | Important updates||
 | --- | --- |
-|`Latest version of Spring Boot & Cloud`| 1. Spring Cloud LoadBalencer instead of Ribbon<br>2. Spring Cloud Gateway instead of Zuul<br>3. Resilience4j instead of Hystrix |
+|`Latest version of Spring Boot & Cloud`| 1. Spring Cloud LoadBalencer instead of Ribbon<br>netflix eureka client comes with spring cloud load balencer<br>2. Spring Cloud Gateway instead of Zuul<br>3. Resilience4j instead of Hystrix |
 |`Docker Containerize microservices`|Run microservices using Docker & Docker Compose|
 |`Kubernetes`|Orchestrate all your microservices with Kubernetes|
 
