@@ -105,5 +105,8 @@
     |`docker images`|display all images|
     |`docker container ls -a`|display all the containers with their status|
     |`docker container stop <container-id>`|stop a docker container|
+    
+    ![alt text](https://github.com/pratap86/microservices/blob/master/images/docker_architecture.PNG?raw=true)
+    
 
 ## Apache Camel Framework with Spring Boot
