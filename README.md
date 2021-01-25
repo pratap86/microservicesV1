@@ -18,13 +18,21 @@
 |`API Gateway`|8765|
 |`Zipkin Distributed Tracing Server`|9411|
 
-- Microservices URLS
+- Microservices URLs before implementing custom routing
 
 |Microservice|URL|
 |---|---|
 |`CURRENCY-EXCHANGE`|http://localhost:8765/currency-exchange/currency-exchange/from/USD/to/INR|
 |`CURRENCY-CONVERSION`|http://localhost:8765/currency-conversion/currency-conversion/resttemplate/from/USD/to/INR/quantity/10|
 |`CURRENCY-CONVERSION`|http://localhost:8765/currency-conversion/currency-conversion/feign/from/USD/to/INR/quantity/10|
+
+- Microservices URLs after implementing custom routing
+
+|Microservice|URL|
+|---|---|
+|`CURRENCY-EXCHANGE`|http://localhost:8765/currency-exchange/from/USD/to/INR|
+|`CURRENCY-CONVERSION`|http://localhost:8765/currency-conversion/resttemplate/from/USD/to/INR/quantity/10|
+|`CURRENCY-CONVERSION`|http://localhost:8765/currency-conversion/feign/from/USD/to/INR/quantity/10|
 
 # Curcuit Breaker
 - Microservice1 -> Microservice2 -> Microservice3 -> Microservice4 -> Microservice5
