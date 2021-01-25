@@ -68,4 +68,23 @@
 | `502` | `BAD GATEWAY` |
 |`503`|`SERVICE UNAVAILABLE`|
 
+## Docker
+
+- Enterprises are heading towrds microservices architecture
+  - Build small focused microservices
+  - Flexibility to innovate and build applications in different programming languages like Go, Java, Python, JavaScript..
+  - but deployment becomes complex!
+  - How we can have one way of deploying  Go, Java, Python, JavaScript ... microservices?
+    - Enter Containers!
+  - Docker
+    - create docker image for each microservices
+    - Docker image contains everything a microservice needs to run
+      - Application Runtime (JDK, Python or NodeJS)
+      - Application code
+      - Dependencies
+    - You can run these docker containers the same way on any infrastructure
+      - local machine
+      - Corporate data center
+      - Cloud
+
 ## Apache Camel Framework with Spring Boot
