@@ -86,5 +86,24 @@
       - local machine
       - Corporate data center
       - Cloud
+    - Default Registry(hub.docker.com) > Repository(narayanpratap86/todo-rest-api-h2) > Tag(1.0.0.RELEASE)
+    - A docker image a static version like a class, while a dynamic version of a docker image is called container like an Object
+    
+    ## Docker commands
+    |Commands|Description|
+    |---|---|
+    |`docker run -p 9411:9411 -d narayanpratap86/todo-rest-api-h2:1.0.0.RELEASE`|To run a docker image in back ground(-d) detached mode, expose at port 9411|
+    |`docker-compose --version`||
+    |`docker-compose up`||
+    |`docker push docker.io/in28min/mmv2-currency-exchange-service:0.0.1-SNAPSHOT`||
+    |`docker push in28min/mmv2-naming-server:0.0.1-SNAPSHOT`||
+    |`docker push in28min/mmv2-currency-conversion-service:0.0.1-SNAPSHOT`||
+    |`docker push in28min/mmv2-api-gateway:0.0.1-SNAPSHOT`||
+    |`watch -n 0.1 curl http://localhost:8000/sample-api`||
+    |`docker container ls`|display the running containers|
+    |`docker logs -f <image-id>`|tailing the logs|
+    |`docker images`|display all images|
+    |`docker container ls -a`|display all the containers with their status|
+    |`docker container stop <container-id>`|stop a docker container|
 
 ## Apache Camel Framework with Spring Boot
