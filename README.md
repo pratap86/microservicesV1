@@ -36,7 +36,7 @@
     - Can we retry the request in case of temporary failures?
     - Can we implemnt rete limiting?
   - Solution : Circuit Breaker Framework - <b>Resilience4j</b>
-  - CircuitBreaker is implemented via a finite machine state machine with normal states: CLOSED, OPEN and HALF_OPEN
+  - CircuitBreaker is implemented via a finite state machine with three normal states: CLOSED, OPEN and HALF_OPEN
 
 # HTTP Status Codes
 |LEVEL|MEASSAGE|
