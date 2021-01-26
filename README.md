@@ -105,7 +105,7 @@
     |`docker images`|display all images|
     |`docker container ls -a`|display all the containers with their status|
     |`docker container stop <container-id>`|stop a docker container|
-    
+    |`docker run -p 9411:9411 openzipkin/zipkin:2.23`|run zipkin server at http://192.168.99.100:9411/zipkin/|
     ![alt text](https://github.com/pratap86/microservices/blob/master/images/docker_architecture.PNG?raw=true)
     
 
