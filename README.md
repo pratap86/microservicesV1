@@ -89,6 +89,8 @@
     - Default Registry(hub.docker.com) > Repository(narayanpratap86/todo-rest-api-h2) > Tag(1.0.0.RELEASE)
     - A docker image a static version like a class, while a dynamic version of a docker image is called container like an Object
     
+        ![alt text](https://github.com/pratap86/microservices/blob/master/images/docker_architecture.PNG?raw=true)
+    
     ## Docker commands
     |Commands|Description|
     |---|---|
@@ -106,7 +108,7 @@
     |`docker container ls -a`|display all the containers with their status|
     |`docker container stop <container-id>`|stop a docker container|
     |`docker run -p 9411:9411 openzipkin/zipkin:2.23`|run zipkin server at http://192.168.99.100:9411/zipkin/|
-    ![alt text](https://github.com/pratap86/microservices/blob/master/images/docker_architecture.PNG?raw=true)
+
     
 
 ## Apache Camel Framework with Spring Boot
