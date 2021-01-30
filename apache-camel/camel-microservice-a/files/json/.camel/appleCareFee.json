@@ -1,0 +1,48 @@
+{
+  "productId": "7J0",
+  "productName": "iPhone 11",
+  "partNumber": "S7547LL/A",
+  "partTypeDesc": "AC+ iPhone 11 Monthly Subscription",
+  "agreementTemplateId": "APPLECARE+ IPHONE 11",
+  "agreementPrice": [{
+    "country": "USA",
+    "currency": "USD",
+    "price": 7.99,
+    "startDate": 1568073600000
+  }],
+  "incidentPrice": [{
+      "currency": "USD",
+      "tierId": "Screen_only_ADH",
+      "price": 29.0,
+      "startDate": 1568073600000
+    },
+    {
+      "currency": "USD",
+      "tierId": "Full_ADH",
+      "price": 99.0,
+      "startDate": 1568073600000
+    }
+  ],
+  "outOfWarrantyPrice": [{
+      "serviceItem": "Battery Replacement",
+      "country": "USA",
+      "currency": "USD",
+      "price": 69.0,
+      "startDate": 1577836800000
+    },
+    {
+      "serviceItem": "Display Replacement (Front)",
+      "country": "USA",
+      "currency": "USD",
+      "price": 199.0,
+      "startDate": 1577836800000
+    },
+    {
+      "serviceItem": "Other - WUR",
+      "country": "USA",
+      "currency": "USD",
+      "price": 399.0,
+      "startDate": 1577836800000
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "appItemDetails": [
+    {
+      "appItemID": "S6711LL/A",
+      "coverageDuration": 36,
+      "appUPC": "190198837530",
+      "appPrice": 16.99,
+      "itemDescription": "AC+ SUB MACBOOK PRO 15' - RTAE",
+      "subscriptionRecurringBillingPeriod": 1,
+      "subscriptionTrailPeriod": 0,
+      "subscriptionAdamInd": "Y",
+      "addOnType": "APPLE_CARE_SUBSCRIPTION",
+      "secondaryItemEligible": "Y",
+      "translationsDetails": [
+        {
+          "languageCode": "EN",
+          "itemDescription": "AC SUB MACBOOK PRO - RTAE",
+          "supportOrgName": "For Support, Visit:",
+          "supportOrgPhone": "www.apple.com/support",
+          "merchandiseCategoryCode": "M65",
+          "merchandiseCategory": "APPLECARE",
+          "tncProdInfo": "apple.com/legal/applecare/terms",
+          "itemId": "S6711LL/A"
+        }
+      ]
+    },
+    {
+      "appItemID": "S6341LL/A",
+      "coverageDuration": 24,
+      "appUPC": "190198736888",
+      "appPrice": 222,
+      "itemDescription": "LIGHTNING IPHONE 8 INSURANCE - RTUP",
+      "subscriptionRecurringBillingPeriod": 0,
+      "subscriptionTrailPeriod": 0,
+      "subscriptionAdamInd": "N",
+      "addOnType": "APPLE_CARE_FULL_PRICE",
+      "secondaryItemEligible": "N",
+      "translationsDetails": [
+        {
+          "languageCode": "EN",
+          "itemDescription": "LIGHTNING IPHONE 8 INSURANCE - RTUP",
+          "supportOrgName": "For Support, Visit:",
+          "supportOrgPhone": "www.apple.com/support",
+          "merchandiseCategoryCode": "AIS",
+          "merchandiseCategory": "Applecare Insurance",
+          "itemId": "S6341LL/A"
+        }
+      ]
+    },
+    {
+      "appItemID": "S3184LL/A",
+      "coverageDuration": 18,
+      "appUPC": "885909266531",
+      "appPrice": 349,
+      "itemDescription": "APP FOR MACBOOK PRO",
+      "subscriptionRecurringBillingPeriod": 0,
+      "subscriptionTrailPeriod": 0,
+      "subscriptionAdamInd": "N",
+      "addOnType": "APPLE_CARE_FULL_PRICE",
+      "secondaryItemEligible": "N",
+      "translationsDetails": [
+        {
+          "languageCode": "EN",
+          "itemDescription": "APP FOR MACBOOK PRO",
+          "supportOrgName": "For Support, Visit:",
+          "supportOrgPhone": "www.apple.com/support",
+          "merchandiseCategoryCode": "M00",
+          "merchandiseCategory": "APPLECARE",
+          "tncProdInfo": "apple.com/legal/applecare/terms",
+          "itemId": "S3184LL/A"
+        }
+      ]
+    },
+    {
+      "appItemID": "S6056LL/A",
+      "coverageDuration": 36,
+      "appUPC": "190198298270",
+      "appPrice": 379,
+      "itemDescription": "MONSOON FOR MACBOOK PRO - RTAE",
+      "subscriptionRecurringBillingPeriod": 0,
+      "subscriptionTrailPeriod": 0,
+      "subscriptionAdamInd": "N",
+      "addOnType": "APPLE_CARE_FULL_PRICE",
+      "secondaryItemEligible": "Y",
+      "translationsDetails": []
+    }
+  ]
+}

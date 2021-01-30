@@ -1,0 +1,77 @@
+{
+  "itemDetails": {
+    "itemId": "D6922G/B",
+    "itemUpc": "888462654012",
+    "secondaryUPC": "0",
+    "storeId": "R039",
+    "salesOrganization": "5630",
+    "itemMasterDetails": {
+      "basicItemDetails": {
+        "itemReturnDays": "0000",
+        "itemType": "N",
+        "itemSubType": "GIFTCARD"
+      },
+      "itemPrice": {
+        "itemUnitPrice": 144.24,
+        "itemReStockingFeeRate": "0000"
+      },
+      "itemFlags": {
+        "nxsItemSerializesFlag": "N",
+        "finishGoodsFlag": false,
+        "itemPriceEntryRequiredFlag" :  "Y"
+      },
+      "itemTaxDetails": {
+        "posItemTaxExemptCode": "N",
+        "taxGroupId": 0,
+        "vatDetails": {
+          "taxGroupPercentage": 0
+        },
+        "storeTaxRate": 9.25
+      },
+      "itemMerchandiseDetails": {
+        "itemClassificationCode0": "GFN"
+      },
+      "itemServices": {},
+      "brazilItemDetails": {}
+    },
+    "itemPromotionDiscountData": [],
+    "itemTranslationDetails": {
+      "itemDescription": "APPLE STORE GIFT CARD - $25",
+      "translationsDetails": [
+        {
+          "languageCode": "en",
+          "itemDescription": "APPLE STORE GIFT CARD - $25",
+          "supportOrgName": "Gift Card Help Desk:",
+          "supportOrgPhone": "1-888-320-3301",
+          "merchandiseCategoryCode": "GFN",
+          "merchandiseCategory": "Giftcard New"
+        }
+      ]
+    },
+    "itemProductHierarchyDetails": {
+      "itemName": "APPLE STORE GIFT CARD - $25-GEN",
+      "itemTypeCode": "P",
+      "itemLevelId": "PROD",
+      "itemClassCode": "6A",
+      "itemClassName": "MAC ACCESSORY",
+      "itemSubClassCode": "XRA",
+      "itemSubClassName": "RETAIL",
+      "itemFamilyCode": "DAA",
+      "itemFamilyName": "GIFTCARD",
+      "itemSubFamilyCode": "GFN",
+      "itemSubFamilyName": "GIFTCARD NEW",
+      "itemPartCode": "PPD6922",
+      "itemPartName": "APPLE STORE GIFT CARD - $25"
+    },
+    "taxable": false,
+    "serialized": false,
+    "blocked": false,
+    "returnable": true
+  },
+  "subscriptionDetails": {
+    "subscriptionDetails": []
+  },
+  "appItemDetails": {
+    "appItemDetails": []
+  }
+}
