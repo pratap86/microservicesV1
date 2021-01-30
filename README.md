@@ -30,9 +30,10 @@
 
 |Microservice|URL|
 |---|---|
-|`CURRENCY-EXCHANGE`|http://localhost:8765/currency-exchange/from/USD/to/INR|
-|`CURRENCY-CONVERSION`|http://localhost:8765/currency-conversion/resttemplate/from/USD/to/INR/quantity/10|
-|`CURRENCY-CONVERSION`|http://localhost:8765/currency-conversion/feign/from/USD/to/INR/quantity/10|
+|`currency-exchange`|http://localhost:8765/currency-exchange/from/USD/to/INR|
+|`currency-conversion`|http://localhost:8765/currency-conversion/resttemplate/from/USD/to/INR/quantity/10|
+|`currency-conversion`|http://localhost:8765/currency-conversion/feign/from/USD/to/INR/quantity/10|
+|`currency-conversion`|http://localhost:8765/currency-conversion-new/from/USD/to/INR/quantity/10|
 
 # Curcuit Breaker
 - Microservice1 -> Microservice2 -> Microservice3 -> Microservice4 -> Microservice5
