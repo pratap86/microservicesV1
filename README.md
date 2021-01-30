@@ -122,3 +122,8 @@
     
 
 ## Apache Camel Framework with Spring Boot
+
+|application.properties|Docker Service|
+|---|---|
+|`spring.activemq.broker-url=tcp://localhost:61616`|connect the microservice to ActiveMQ|
+|`camel.component.kafka.brokers=localhost:9092`|connect the microservice to Kafka|
