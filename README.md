@@ -127,6 +127,11 @@
       -  Run docker-compose up and Compose starts and runs your entire app.
     - docker-compose up Run this command where docker-compose.yaml file present.
 
+|Docker Compose|Commands|
+|---|---|
+|`docker-compose up`|search the docker-compose.yaml file and run the containers|
+|`docker-compose up -f custom docker compose file name`|search the docker-compose-custom-file.yaml file and run the containers|
+|`up, restart, build, scale, stop, kill, logs, ps`||
     
 
 ## Apache Camel Framework with Spring Boot
