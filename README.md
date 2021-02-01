@@ -71,6 +71,8 @@
 
 ## Docker
 
+![alt text](https://github.com/pratap86/microservices/blob/master/images/docker_architecture.PNG?raw=true)
+
 - Enterprises are heading towrds microservices architecture
   - Build small focused microservices
   - Flexibility to innovate and build applications in different programming languages like Go, Java, Python, JavaScript..
@@ -91,16 +93,13 @@
     - A docker image a static version like a class, while a dynamic version of a docker image is called container like an Object
     - Maven Plugin to build docker images : mvn spring-boot:build-image -DSkipTests
     - Images
-      - currency-exchange-service
-        - narayanpratap86/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
-      - currency-conversion-service
-        - narayanpratap86/mmv2-currency-conversion-service:0.0.1-SNAPSHOT
-      - api-gateway
-        - docker.io/narayanpratap86/mmv2-api-gateway:0.0.1-SNAPSHOT
-      - naming-server
-        - narayanpratap86/mmv2-naming-server:0.0.1-SNAPSHOT
-    
-        ![alt text](https://github.com/pratap86/microservices/blob/master/images/docker_architecture.PNG?raw=true)
+              
+        |service|image|
+        |---|---|
+        |`currency-exchange-service`|narayanpratap86/mmv2-currency-exchange-service:0.0.1-SNAPSHOT|
+        |`currency-conversion-service`|narayanpratap86/mmv2-currency-conversion-service:0.0.1-SNAPSHOT|
+        |`api-gateway`|docker.io/narayanpratap86/mmv2-api-gateway:0.0.1-SNAPSHOT|
+        |`naming-server`|narayanpratap86/mmv2-naming-server:0.0.1-SNAPSHOT|
     
     ## Docker commands
     |Commands|Description|
