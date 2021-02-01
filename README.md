@@ -116,6 +116,11 @@
     |`docker container stop <container-id>`|stop a docker container|
     |`docker run -p 9411:9411 openzipkin/zipkin:2.23`|run zipkin server at http://192.168.99.100:9411/zipkin/|
     |`docker run -p 61616:61616 -p 8161:8161 rmohr/activemq`|To launch ActiveMQ, The JMX broker listens on port 61616 and the Web Console on port 8161|
+    |`docker run -d -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=testdb -e MYSQL_USER=pratap<br> -e MYSQL_PASSWORD=pratap -p 3306:3306 mysql:5.7`|Run mysql as docker image |
+    |`docker network ls`|networks list; bridge, host and none, internal communication must be happen only with custom network|
+    |`docker volume ls`|volumes list|
+    |`mysqlsh`|mysql shell|
+    |`\connect pratap@192.168.99.100:3306`|connect docker-mysql through mysql shell|
     
     ## Docker Compose
     - Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application’s services. Then, with a single command, you create and start all the services from your configuration.
@@ -131,6 +136,18 @@
 |`docker-compose up`|search the docker-compose.yaml file and run the containers|
 |`docker-compose up -f custom docker compose file name`|search the docker-compose-custom-file.yaml file and run the containers|
 |`up, restart, build, scale, stop, kill, logs, ps`||
+
+## Kubernetes K8s
+- in greek means Helmsman or Ship Pilot
+
+- Container Orchestration : Group containers to form a cluster
+  - Container Orchestration is process of forming a cluster of containers that work with each other with all below non-functional requirments are met.
+    - Fault Tolerance
+    - On-demand Scalability
+    - Auto Discovery
+    - Performance
+    - Auto Update and Rollback
+- <b>Kubernetes Object Model</b>
     
 
 ## Apache Camel Framework with Spring Boot
