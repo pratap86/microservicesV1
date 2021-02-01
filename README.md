@@ -148,6 +148,17 @@
     - Performance
     - Auto Update and Rollback
 - <b>Kubernetes Object Model</b>
+
+|K8s Objects|Definition|
+|---|---|
+|`Service`||
+|`Namespace`|Logicaly group the set of applications, & they have own namespace in K8s cluster<br>kubectl get namespaces|
+|`Deployment`|Manage ReplicaSet & Pods|
+|`ReplicaSet`|Help and monitors the Pods, bcz Pods are not self heiling or Fault tolerance|
+|`Pod`|A lowest Object, logical group of docker containers|
+
+- <b>Kubernetes Architecture</b>
+![alt text](https://github.com/pratap86/microservices/blob/master/images/K8s_Architecture.PNG?raw=true)
     
 
 ## Apache Camel Framework with Spring Boot
