@@ -13,8 +13,8 @@ import com.pratap.microservices.currencyexchange.repositories.CurrencyExchangeRe
 
 @RestController
 public class CurrencyExchangeController {
-	
-	private static final Logger LOGGER = LoggerFactory.getLogger(CurrencyExchangeController.class);
+
+private static final Logger LOGGER = LoggerFactory.getLogger(CurrencyExchangeController.class);
 	
 	@Autowired
 	private Environment environment;
@@ -31,4 +31,5 @@ public class CurrencyExchangeController {
 		currencyExchange.setEnvironment(environment.getProperty("local.server.port"));
 		return currencyExchange;
 	}
+	
 }

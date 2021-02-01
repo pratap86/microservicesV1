@@ -3,7 +3,9 @@ spring:
     name: currency-exchange
 #data source
   datasource:
-    url: jdbc:mysql://localhost:3306/testdb
+#    url: jdbc:mysql://localhost:3306/testdb
+# docker mysql connection
+    url: jdbc:mysql://192.168.99.100:3306/testdb
     username: pratap
     password: pratap
   jpa:
@@ -33,4 +35,3 @@ resilience4j:
         max-attempts: 5
         wait-duration: 1s
         enable-exponential-backoff: true
-
