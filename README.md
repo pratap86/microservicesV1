@@ -149,16 +149,31 @@
     - Auto Update and Rollback
 - <b>Kubernetes Object Model</b>
 
-|K8s Objects|Definition|
+|K8s Objects/commands|Definition|
 |---|---|
 |`Service`||
 |`Namespace`|Logicaly group the set of applications, & they have own namespace in K8s cluster<br>kubectl get namespaces|
 |`Deployment`|Manage ReplicaSet & Pods|
 |`ReplicaSet`|Help and monitors the Pods, bcz Pods are not self heiling or Fault tolerance|
 |`Pod`|A lowest Object, logical group of docker containers|
+|`kubectl explain pods`| Pod is a collection of containers that can run on a host.<br>This resource is created by clients and scheduled onto hosts.|
+|`kubectl get pods`|display the pods list|
+|`kubectl describe pod <pod-id>`|describe pod|
+|`minikube start --memory=3000MB --vm-driver=virtualbox`|start minikube|
+|`minikube status`|to check status|
+|`minikube stop`|stop minikube|
+|`minikube delete`|delete minikube|
+|`kubectl config view`|k8s configuration yaml view|
 
 - <b>Kubernetes Architecture</b>
 ![alt text](https://github.com/pratap86/microservices/blob/master/images/K8s_Architecture.PNG?raw=true)
+
+- Kubernetes Installation
+  - Single Node Installation
+    - Minikube & Docker Desktop, master & worker nodes come together, good for development & testing
+  - Single Master & Multi worker
+  - Multi master & Multi Worker
+  - Multi Master, Multi worker & multi etcd
     
 
 ## Apache Camel Framework with Spring Boot
