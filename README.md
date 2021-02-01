@@ -164,6 +164,11 @@
 |`minikube stop`|stop minikube|
 |`minikube delete`|delete minikube|
 |`kubectl config view`|k8s configuration yaml view|
+|`kubectl run firstpod --image=nginx`|create and run pod|
+|`kubectl get pods`|pod list|
+|`kubectl describe pod pod-name`|describe pod|
+|`kubectl exec -it pod-name -- /bin/bash`|go inside a pod|
+|`kubectl get pod pod-name -o yaml`|pod yaml description|
 
 - <b>Kubernetes Architecture</b>
 ![alt text](https://github.com/pratap86/microservices/blob/master/images/K8s_Architecture.PNG?raw=true)
