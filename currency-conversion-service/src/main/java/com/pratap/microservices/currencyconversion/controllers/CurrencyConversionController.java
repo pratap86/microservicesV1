@@ -1,4 +1,4 @@
-package com.pratap.microservices.currencyexconversion.controllers;
+package com.pratap.microservices.currencyconversion.controllers;
 
 import java.math.BigDecimal;
 import java.util.HashMap;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import com.pratap.microservices.currencyexconversion.entities.CurrencyConversion;
-import com.pratap.microservices.currencyexconversion.restclients.CurrencyExchangeProxy;
+import com.pratap.microservices.currencyconversion.entities.CurrencyConversion;
+import com.pratap.microservices.currencyconversion.restclients.CurrencyExchangeProxy;
 
 @RestController
 public class CurrencyConversionController {

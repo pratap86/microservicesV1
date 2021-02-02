@@ -1,4 +1,4 @@
-package com.pratap.microservices.currencyexconversion.entities;
+package com.pratap.microservices.currencyconversion.entities;
 
 import java.math.BigDecimal;
 
