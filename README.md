@@ -173,12 +173,25 @@
 |`kubectl delete all --all`|to delete all pods|
 |`kubectl create -f file-name.yaml`|create pod through yml file|
 |`kubectl delete -f file-name.yml`|To delete a pod|
-|`kubectl get pods`|after create the pod, list the pod with their status|
+|`kubectl get pods`|after create the pod, list the pod with their status in default namespace|
 |`kubectl describe pods`|show the internal executions status, see the all events behind the pod |
 |`kubectl exec -it pod-name --container container-name -- /bin/bash`|To go inside a perticular container, -it means intractive mode|
 |`kubectl get pods -o yaml`|get the pod Phase, track any issue, go from bottom to up till status|
 |`kubectl get all --show-labels`|display all labels|
 |`kubectl get all --selector='app=fp' 'label-name'`<br>also use app!=fp, app in (fp, red)|to fetch only selected pod|
+|`kubectl get ns or namespaces`|list namespaces|
+|`kubectl create ns namespace-name`|create own namespace|
+|`kubectl create -f firstpod.yml --namespace firstns`|create pod inside own namespace|
+|`kubectl get pods --namespace firstns`|list pods inside perticular namespace|
+|`kubectl config view`|view the namespace currently set|
+|`kubectl config set-context --current --namespace firstns`|set the namespace in current context ie minikube|
+|`kubectl create -f firstpod.yml --dry-run=client`|to verify our yml syntax is correct? actually not created the pod|
+|`kubectl get pod/pod-name -o yaml --export=true`|to view the internally created yaml file|
+|`kubectl explain pod`|Documentation of resource|
+|`kubectl explain pod.spec`|one more level inside|
+|`minikube dashboard`|launch the web dashboard|
+|`kubectl get deployments`|list the deployment|
+|`kubectl create -f deployment-file-name`|create deployment|
 
 - <b>POD Life Cycle Phase</b>
   - Pending : happens at that time of creation & made the entry(APIServer) in etcd
@@ -191,7 +204,30 @@
   - Labels are key-value pair assigned to a kubernetes cluster
   - use selector to filter out a specific pod from Tons of running pods
   
-- <b>Annotations</b> Part of metadat, Any arbitrary information read by the developer
+- <b>Annotations</b> Part of metadata, Any arbitrary and useful information read by the others developer or DevOps engineer & not directly used as labels.
+
+- <b>Namespaces</b> A logical or virtual division of kubernetes cluster, each namespace allocate a quota ie cpu quota.
+
+- <b>Deployment</b> Autoscaling feature
+
+- <b>Three way to access Kubernetes cluster</b>
+  - Web Dashboard : minikube dashboard
+  - CLI kubectl command line
+  - REST APIs
+  
+- <b>Service & Types</b>
+  - Service is another abstraction just like a pod, it will logically group a set of pods that needs to access each other, so that they will communicate to each other.
+  - Service, A logically grouping of pods that needs to each other or they can perform a functionality that required by a application out side the cluster.
+  - Depending on different level of access, there are different service types we can configured.
+    - Only Cluster
+      - <b>ClusterIP Service</b>, default is ClusterIP if we not define type.
+    - Outside
+      - <b>NodePort Service</b> Port range 30000 to 32767, internally uses the ClusterIP
+    - Maps to a entity
+      - <b>LoadBalencer Service</b> used wrt cloud provider like AWS, Azure. Internally uses the ClusterIP & NodePort
+    - External Name
+    - Ingress lower number port like 8080, 80
+  
 
 - <b>Kubernetes Architecture</b>
 ![alt text](https://github.com/pratap86/microservices/blob/master/images/K8s_Architecture.PNG?raw=true)
