@@ -3,11 +3,21 @@ spring:
     name: currency-exchange
 #data source
   datasource:
-    url: jdbc:mysql://localhost:3306/testdb
+#    url: jdbc:mysql://localhost:3306/testdb
+# docker mysql connection
+    url: jdbc:mysql://192.168.99.100:3306/testdb
     username: pratap
     password: pratap
   jpa:
     show-sql: true
+  zipkin:
+    base-url: http://192.168.99.100:9411/
+    #sender:
+    #  type: rabbit
+  #Trace every request in dev environment probability: 1.0, eg: 0.05 trace only 5% of request
+  sleuth:
+    sampler:
+      probability: 1.0
 server:
   servlet:
     context-path: /currency-exchange/
@@ -25,4 +35,3 @@ resilience4j:
         max-attempts: 5
         wait-duration: 1s
         enable-exponential-backoff: true
-

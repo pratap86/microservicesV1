@@ -8,6 +8,12 @@ spring:
      #   locator:
       #    enabled: true
        #   lower-case-service-id: true
+  zipkin:
+    base-url: http://192.168.99.100:9411/
+  sleuth:
+    sampler:
+      probability: 1.0
+      
 #port
 server:
   port: 8765
@@ -16,4 +22,3 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
-      

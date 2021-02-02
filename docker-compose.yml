@@ -1,0 +1,120 @@
+version: "2.2"
+services: 
+  currency-exchange: 
+    container_name: currency-exchange
+    image: narayanpratap86/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
+    restart: on-failure
+    mem_limit: 700m
+    ports: 
+     - "8000:8000"
+    environment: 
+      WAIT_HOSTS: mysql:3306
+    depends_on: 
+      - docker-mysql
+      - naming-server
+      - rabbitmq
+    environment:
+      EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://naming-server:8761/eureka
+      SPRING.ZIPKIN.BASEURL: http://zipkin-server:9411/
+      RABBIT_URI: amqp://guest:guest@rabbitmq:5672
+      SPRING_RABBITMQ_HOST: rabbitmq
+      SPRING_ZIPKIN_SENDER_TYPE: rabbit
+    networks: 
+     - currency-network
+  
+  docker-mysql:
+    container_name: docker-mysql
+    image: mysql:5.7
+    restart: always
+    environment: 
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: testdb
+      MYSQL_USER: pratap
+      MYSQL_PASSWORD: pratap
+      MYSQL_ROOT_HOST: '%'
+    volumes: 
+      - ./sql:/docker-entrypoint-initdb.d
+    ports: 
+      - "3306:3306"
+    #healthcheck: 
+     # test: "/usr/bin/mysql --user=pratap --password=pratap --execute \"SHOW DATABASES \""
+      #internal: 4s
+      #timeout: 20s
+      #retries: 5
+
+    networks: 
+      - currency-network
+
+  naming-server: 
+    container_name: eureka-naming-server
+    image: narayanpratap86/mmv2-naming-server:0.0.1-SNAPSHOT
+    restart: on-failure
+    mem_limit: 700m
+    ports: 
+      - "8761:8761"
+    networks: 
+      - currency-network
+
+  rabbitmq: 
+    container_name: rabbitmq
+    image: rabbitmq:3.8.11-management
+    mem_limit: 300m
+    ports: 
+      - "5672:5672"
+      - "15672:15672"
+    networks: 
+      - currency-network
+
+  currency-conversion:
+    image: narayanpratap86/mmv2-currency-conversion-service:0.0.1-SNAPSHOT
+    container_name: currency-conversion
+    mem_limit: 700m
+    ports:
+      - "8100:8100"
+    networks:
+      - currency-network
+    depends_on:
+      - naming-server
+      - rabbitmq
+    environment:
+      EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://naming-server:8761/eureka
+      SPRING.ZIPKIN.BASEURL: http://zipkin-server:9411/
+      RABBIT_URI: amqp://guest:guest@rabbitmq:5672
+      SPRING_RABBITMQ_HOST: rabbitmq
+      SPRING_ZIPKIN_SENDER_TYPE: rabbit
+
+  api-gateway:
+    image: narayanpratap86/mmv2-api-gateway:0.0.1-SNAPSHOT
+    container_name: spring-cloud-api-gateway
+    mem_limit: 700m
+    ports:
+      - "8765:8765"
+    networks:
+      - currency-network
+    depends_on:
+      - naming-server
+      - rabbitmq
+    environment:
+      EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://naming-server:8761/eureka
+      SPRING.ZIPKIN.BASEURL: http://zipkin-server:9411/
+      RABBIT_URI: amqp://guest:guest@rabbitmq:5672
+      SPRING_RABBITMQ_HOST: rabbitmq
+      SPRING_ZIPKIN_SENDER_TYPE: rabbit
+
+  zipkin-server:
+    image: openzipkin/zipkin:2.23
+    container_name: zipkin-server
+    mem_limit: 300m
+    ports:
+      - "9411:9411"
+    networks:
+      - currency-network
+    environment:
+      RABBIT_URI: amqp://guest:guest@rabbitmq:5672
+    depends_on:
+      - rabbitmq
+
+
+networks: 
+  currency-network:
+    driver: bridge
