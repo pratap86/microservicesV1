@@ -1,10 +1,10 @@
-package com.pratap.microservices.currencyexconversion.restclients;
+package com.pratap.microservices.currencyconversion.restclients;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import com.pratap.microservices.currencyexconversion.entities.CurrencyConversion;
+import com.pratap.microservices.currencyconversion.entities.CurrencyConversion;
 
 //@FeignClient(name = "currency-exchange", url="localhost:8000")
 @FeignClient(name = "currency-exchange")

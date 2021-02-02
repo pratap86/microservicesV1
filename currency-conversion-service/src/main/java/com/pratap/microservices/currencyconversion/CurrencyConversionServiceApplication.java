@@ -1,4 +1,4 @@
-package com.pratap.microservices.currencyexconversion;
+package com.pratap.microservices.currencyconversion;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
