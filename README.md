@@ -169,6 +169,29 @@
 |`kubectl describe pod pod-name`|describe pod|
 |`kubectl exec -it pod-name -- /bin/bash`|go inside a pod|
 |`kubectl get pod pod-name -o yaml`|pod yaml description|
+|`kubectl delete pod pod-name`|delete existing runnig pod|
+|`kubectl delete all --all`|to delete all pods|
+|`kubectl create -f file-name.yaml`|create pod through yml file|
+|`kubectl delete -f file-name.yml`|To delete a pod|
+|`kubectl get pods`|after create the pod, list the pod with their status|
+|`kubectl describe pods`|show the internal executions status, see the all events behind the pod |
+|`kubectl exec -it pod-name --container container-name -- /bin/bash`|To go inside a perticular container, -it means intractive mode|
+|`kubectl get pods -o yaml`|get the pod Phase, track any issue, go from bottom to up till status|
+|`kubectl get all --show-labels`|display all labels|
+|`kubectl get all --selector='app=fp' 'label-name'`<br>also use app!=fp, app in (fp, red)|to fetch only selected pod|
+
+- <b>POD Life Cycle Phase</b>
+  - Pending : happens at that time of creation & made the entry(APIServer) in etcd
+  - Running : means all the containers are created and shceduled at one of the worker node 
+  - Succeeded : all the containers  are run successfull
+  - Failed
+  - Unknown : In the some reason, if the Pod status could not be obtained by the master node, API Server
+  
+- <b>Labels & Selector</b> : Part of the metadata, To logically group and queried the kubernetes resources
+  - Labels are key-value pair assigned to a kubernetes cluster
+  - use selector to filter out a specific pod from Tons of running pods
+  
+- <b>Annotations</b> Part of metadat, Any arbitrary information read by the developer
 
 - <b>Kubernetes Architecture</b>
 ![alt text](https://github.com/pratap86/microservices/blob/master/images/K8s_Architecture.PNG?raw=true)
