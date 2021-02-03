@@ -192,6 +192,18 @@
 |`minikube dashboard`|launch the web dashboard|
 |`kubectl get deployments`|list the deployment|
 |`kubectl create -f deployment-file-name`|create deployment|
+|`kubectl create -f service-file-name`|create the service|
+|`kubectl get services`|list the services|
+|`minikube ip`|display minikube ip|
+|`minikube service service-name`|to launch the created service|
+|`kubectl get deploy deployment-name -o yaml`|to view deplyed yaml file|
+|`kubectl get deploy deployment-name -o json`|in json format|
+|`kubectl replace -f deployment-file-name`|update an existing deployment|
+|`kubectl describe deployment deployment-name`|to view the events of deployment|
+|`kubectl rollout history deployment deployment-name`|Rollout history of deployment|
+|`kubectl rollout history deployment deployment-name --revision=2`|view the actual changes in deployment|
+|`kubectl rollout undo deployment deployment-name --to-revision=1`|undo the deployment changes and go back to the initial state|
+|`kubectl rollout --help`|rollout Help|
 
 - <b>POD Life Cycle Phase</b>
   - Pending : happens at that time of creation & made the entry(APIServer) in etcd
@@ -227,6 +239,12 @@
       - <b>LoadBalencer Service</b> used wrt cloud provider like AWS, Azure. Internally uses the ClusterIP & NodePort
     - External Name
     - Ingress lower number port like 8080, 80
+    
+  - <b>Rolling Update</b> strategies
+    - Recreate - dosent promise zero down time there
+    - RollingUpdate - promise zero downtime
+      - maxUnavailable - (For old Pods)how many pods immediate destroy at the time of RollingUpdate
+      - maxSurge - (For new Pods)how many new pods should create at the time of RollingUpdate
   
 
 - <b>Kubernetes Architecture</b>
