@@ -204,6 +204,7 @@
 |`kubectl rollout history deployment deployment-name --revision=2`|view the actual changes in deployment|
 |`kubectl rollout undo deployment deployment-name --to-revision=1`|undo the deployment changes and go back to the initial state|
 |`kubectl rollout --help`|rollout Help|
+|`kubectl scale deployment deployment-name --replicas=20`|manualy scale|
 
 - <b>POD Life Cycle Phase</b>
   - Pending : happens at that time of creation & made the entry(APIServer) in etcd
