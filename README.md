@@ -205,6 +205,11 @@
 |`kubectl rollout undo deployment deployment-name --to-revision=1`|undo the deployment changes and go back to the initial state|
 |`kubectl rollout --help`|rollout Help|
 |`kubectl scale deployment deployment-name --replicas=20`|manualy scale|
+|`minikube ssh`|open minikube ssh terminal|
+|`kubectl get configmaps`|list configmaps|
+|`kubectl get secrets/secret`|list secrets|
+|`kubectl get pv`|list persistent volumes|
+|`kubectl get pvc`|list persistent volume claim|
 
 - <b>POD Life Cycle Phase</b>
   - Pending : happens at that time of creation & made the entry(APIServer) in etcd
@@ -246,6 +251,24 @@
     - RollingUpdate - promise zero downtime
       - maxUnavailable - (For old Pods)how many pods immediate destroy at the time of RollingUpdate
       - maxSurge - (For new Pods)how many new pods should create at the time of RollingUpdate
+  - Labels and Selectors used to map Pods to Replicasets in a Deployment and Pods to a Service.
+  - Service will open up the resources in the cluster to the world outside.
+  
+  - <b>Kubernetes Volume</b>
+    - Types;
+      - emptyDir
+      - nfs
+      - hostPath
+      - Config Map & secret and many more
+  - <b>Persistent Volume & PersistentVolumeClaim</b>
+    - Persistent Volume is space at cluster level and it claim through PersistentVolumeClaim
+      - Create persistent volume
+      - create persistent colume claim
+      - mount the volume claim
+    - Access modes
+      - ReadWriteOnce -> only one Node in cluster can Read & Write to the perticuler volume in the space of cluster
+      - ReadOnlyMany -> Any number of Nodes in cluster can read only this volume 
+      - ReadWriteMany -> Any number of Nodes in cluster can read and write this volume
   
 
 - <b>Kubernetes Architecture</b>
