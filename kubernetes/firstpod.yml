@@ -1,0 +1,16 @@
+kind: Pod
+apiVersion: v1
+metadata: 
+    name: firstpod
+    labels: 
+        app: fp
+        release: 1.0-release
+        team: walkano
+    annotations: 
+        logsDir: "/etc/logs"
+spec: # where Body is begins
+    containers: 
+        - name: db
+          image: redis
+        - name: web
+          image: httpd

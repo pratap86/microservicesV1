@@ -1,0 +1,23 @@
+apiVersion: apps/v1 # 1. first line, for Deployment use apps/v1
+kind: Deployment # 2. kind, tells the kubernetes, what type of resource we are going to create
+# each type of resource like deploymeny or service has metadata, specification and status
+# At run-time kubernetes generate the status
+metadata: 
+    name: mywebserver
+    labels: 
+        app: httpd
+spec: # 3. we define what this deployment is about?
+    replicas: 2 # 4. deployment always about the replica set & always deal with Pods
+    selectors: # 8. replicas connected through pod via selectors, lables must be match here A & B 
+        matchLabels: 
+            app: httpd # A
+        template: # 5. and Pods are define via template
+            metadata: # 6. and each pod has metadata & specification
+                labels: 
+                    app: httpd # B
+            spec: # 7. define actual stuff, list of containers
+                containers: 
+                    - name: myhttpd
+                      image: httpd
+                      ports: 
+                          - containerPort: 80
