@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: demo-configmap
+data:
+    initdb.sql:
+        select * from product;
+        create table coupon();
+    keys:
+        1234eewff4241221wdwwer
+        808-r3hiwwqff92i4023922i42irjjfe
