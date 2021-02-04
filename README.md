@@ -156,13 +156,13 @@
 |`Deployment`|Manage ReplicaSet & Pods|
 |`ReplicaSet`|Help and monitors the Pods, bcz Pods are not self heiling or Fault tolerance|
 |`Pod`|A lowest Object, logical group of docker containers|
-|`kubectl explain pods`| Pod is a collection of containers that can run on a host.<br>This resource is created by clients and scheduled onto hosts.|
-|`kubectl get pods`|display the pods list|
-|`kubectl describe pod <pod-id>`|describe pod|
 |`minikube start --memory=3000MB --vm-driver=virtualbox`|start minikube|
 |`minikube status`|to check status|
 |`minikube stop`|stop minikube|
 |`minikube delete`|delete minikube|
+|`kubectl explain pods`| Pod is a collection of containers that can run on a host.<br>This resource is created by clients and scheduled onto hosts.|
+|`kubectl get pods`|display the pods list|
+|`kubectl describe pod <pod-id>`|describe pod|
 |`kubectl config view`|k8s configuration yaml view|
 |`kubectl run firstpod --image=nginx`|create and run pod|
 |`kubectl get pods`|pod list|
