@@ -1,4 +1,4 @@
-package com.pratap.microservices.currencyexconversion;
+package com.pratap.microservices.currencyconversion;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
