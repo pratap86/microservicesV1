@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: currency-exchange-app
+    labels:
+        app: currency-exchange-app
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            app: currency-exchange-app
+    template:
+        metadata:
+            name: currency-exchange-app
+            labels:
+                app: currency-exchange-app
+        spec:
+            containers:
+                - name: currency-exchange-app
+                  image: narayanpratap86/mmv2-currency-conversion-service:0.0.11-SNAPSHOT

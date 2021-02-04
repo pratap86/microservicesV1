@@ -1,8 +1,8 @@
 spring:
   application:
     name: currency-conversion
-  zipkin:
-    base-url: http://192.168.99.100:9411/
+  #zipkin:
+    #base-url: http://192.168.99.100:9411/
   sleuth:
     sampler:
       probability: 1.0
@@ -11,7 +11,18 @@ server:
   servlet:
     context-path: /currency-conversion/
 # Register with Eureka Naming Server
-eureka:
-  client:
-    service-url:
-      defaultZone: http://192.168.99.100:8761/eureka
+#eureka:
+ # client:
+  #  service-url:
+   #   defaultZone: http://192.168.99.100:8761/eureka
+# kubernetes
+management:
+  endpoint:
+    health:
+      probes:
+        enabled: true
+  health:
+    livenessstate:
+      enabled: true
+    readinessstate:
+      enabled: true
