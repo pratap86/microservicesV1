@@ -6,12 +6,12 @@ spring:
 #    url: jdbc:mysql://localhost:3306/testdb
 # docker mysql connection
     url: jdbc:mysql://docker-mysql:3306/testdb
-    username: pratap
+    username: root
     password: pratap
   jpa:
     show-sql: true
   zipkin:
-    base-url: http://192.168.99.105:9411/
+    base-url: http://192.168.99.100:9411/
     #sender:
     #  type: rabbit
   #Trace every request in dev environment probability: 1.0, eg: 0.05 trace only 5% of request
@@ -26,7 +26,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://192.168.99.105:8761/eureka
+      defaultZone: http://192.168.99.100:8761/eureka
 #Resilience4j
 resilience4j:
   retry:

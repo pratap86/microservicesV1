@@ -1,3 +1,4 @@
+use testdb;
 CREATE TABLE currency_exchange 
 (
 ID BIGINT NOT NULL AUTO_INCREMENT,
@@ -6,7 +7,6 @@ currency_to VARCHAR(20),
 conversion_multiple DECIMAL,
 PRIMARY KEY (ID)
 );
-
 insert into currency_exchange(currency_from, currency_to, conversion_multiple)
 values
 ('USD', 'INR', 65),
