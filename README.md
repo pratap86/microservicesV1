@@ -293,6 +293,11 @@
 
 ### SAGA
 
+- SAGA is a event handling component that manage the sequence of local transactions.
+- SAGA handle an event and publish a new command to trigger the next local transaction in SAGA. If one of local transaction is fails than SAGA would need to execute a series of compensating transactions that will undo the changes that was made by preceding transactions.
+- Compensating transactions are performed in reverse order.
+- 
+
 #### Choreography based SAGA
 #### Orchestration based SAGA
 
