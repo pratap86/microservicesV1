@@ -18,7 +18,15 @@
 |`API Gateway`|8765|
 |`Zipkin Distributed Tracing Server`|9411|
 
-- Microservices URLs before implementing custom routing
+- Microservices initial URLs
+
+|Microservice|URL|
+|---|---|
+|`CURRENCY-EXCHANGE`|http://localhost:8765/CURRENCY-EXCHANGE/currency-exchange/from/USD/to/INR|
+|`CURRENCY-CONVERSION`|http://localhost:8765/CURRENCY-CONVERSION/currency-conversion/from/USD/to/INR/quantity/10|
+|`CURRENCY-CONVERSION`|http://localhost:8765/CURRENCY-CONVERSION/currency-conversion-feign/from/USD/to/INR/quantity/10|
+
+- Microservices Lower Case URLs
 
 |Microservice|URL|
 |---|---|
