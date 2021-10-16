@@ -24,24 +24,20 @@
 |---|---|
 |`CURRENCY-EXCHANGE`|http://localhost:8765/CURRENCY-EXCHANGE/currency-exchange/from/USD/to/INR|
 |`CURRENCY-CONVERSION`|http://localhost:8765/CURRENCY-CONVERSION/currency-conversion/from/USD/to/INR/quantity/10|
-|`CURRENCY-CONVERSION`|http://localhost:8765/CURRENCY-CONVERSION/currency-conversion-feign/from/USD/to/INR/quantity/10|
 
 - Microservices Lower Case URLs
 
 |Microservice|URL|
 |---|---|
 |`CURRENCY-EXCHANGE`|http://localhost:8765/currency-exchange/currency-exchange/from/USD/to/INR|
-|`CURRENCY-CONVERSION`|http://localhost:8765/currency-conversion/currency-conversion/resttemplate/from/USD/to/INR/quantity/10|
-|`CURRENCY-CONVERSION`|http://localhost:8765/currency-conversion/currency-conversion/feign/from/USD/to/INR/quantity/10|
+|`CURRENCY-CONVERSION`|http://localhost:8765/currency-conversion/currency-conversion/from/USD/to/INR/quantity/10|
 
 - Microservices URLs after implementing custom routing
 
 |Microservice|URL|
 |---|---|
 |`currency-exchange`|http://localhost:8765/currency-exchange/from/USD/to/INR|
-|`currency-conversion`|http://localhost:8765/currency-conversion/resttemplate/from/USD/to/INR/quantity/10|
-|`currency-conversion`|http://localhost:8765/currency-conversion/feign/from/USD/to/INR/quantity/10|
-|`currency-conversion`|http://localhost:8765/currency-conversion-new/from/USD/to/INR/quantity/10|
+|`currency-conversion`|http://localhost:8765/currency-conversion/from/USD/to/INR/quantity/10|
 
 # Curcuit Breaker
 - Microservice1 -> Microservice2 -> Microservice3 -> Microservice4 -> Microservice5
