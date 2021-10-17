@@ -116,8 +116,16 @@
     |`docker container ls`|display the running containers|
     |`docker logs -f <image-id>`|tailing the logs|
     |`docker images`|display all images|
+    |`docker tag <repository>:<version-name> <repository>:<new-version-name>`|create existing image with new tag name|
+    |`docker image history <image-id> OR <repository-name-with-tag>`|display image history|
+    |`docker image inspect <image-id> OR <repository-name-with-tag>`|display a JSON form details|
+    |`docker image remove <image-id> OR <repository-name-with-tag>`|to remove a image from local registry|
     |`docker container ls -a`|display all the containers with their status|
     |`docker container stop <container-id>`|stop a docker container|
+    |`docker container pause <container-id>`|just pause a container in to a specific state|
+    |`docker container unpause <container-id>`|unpause a container|
+    |`docker container inspect <container-id>`|display a JSON form details|
+    |`docker container prune`|This will remove all the stopped containers|
     |`docker run -p 9411:9411 openzipkin/zipkin:2.23`|run zipkin server at http://192.168.99.100:9411/zipkin/|
     |`docker run -p 61616:61616 -p 8161:8161 rmohr/activemq`|To launch ActiveMQ, The JMX broker listens on port 61616 and the Web Console on port 8161|
     |`docker run -d -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=testdb -e MYSQL_USER=pratap<br> -e MYSQL_PASSWORD=pratap -p 3306:3306 mysql:5.7`|Run mysql as docker image |
