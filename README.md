@@ -108,6 +108,7 @@
     ## Docker commands
     |Commands|Description|
     |---|---|
+    |`docker-machine ip`|show docker ip details|
     |`docker run -p 9411:9411 -d narayanpratap86/todo-rest-api-h2:1.0.0.RELEASE`|To run a docker image in back ground(-d) detached mode, expose at port 9411|
     |`docker-compose --version`|docker-compose version|
     |`docker-compose up`|start multple services through docker compose|
