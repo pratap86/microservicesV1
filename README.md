@@ -173,7 +173,7 @@
         <version>3.1.4</version>
         <configuration>
           <to>
-            <image>myimage</image>
+            <image>narayanpratap86/pnv2-${project.artifactId}:${project.version}</image>
           </to>
         </configuration>
       </plugin>
