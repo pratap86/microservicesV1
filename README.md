@@ -139,6 +139,55 @@
     |`mysqlsh`|mysql shell|
     |`\connect pratap@192.168.99.100:3306`|connect docker-mysql through mysql shell|
     
+## Dockerise your service with Plugins
+    
+ ### Using integrated spring boot build-image goal
+    
+``` ruby
+    <plugin>
+		  <groupId>org.springframework.boot</groupId>
+		  <artifactId>spring-boot-maven-plugin</artifactId>
+		  <configuration>
+		    <image>
+		      <name>narayanpratap86/pnv2-${project.artifactId}:${project.version}</name>
+		    </image>
+		    <pullPolicy>IF_NOT_PRESENT</pullPolicy>
+      </configuration>
+   </plugin>
+     
+   And from command prompt just run the command;
+   mvn spring-boot:build-image
+```
+    
+### Using  GoogleContainerTools/jib
+    
+ ``` ruby
+  <project>
+  ...
+  <build>
+    <plugins>
+      ...
+      <plugin>
+        <groupId>com.google.cloud.tools</groupId>
+        <artifactId>jib-maven-plugin</artifactId>
+        <version>3.1.4</version>
+        <configuration>
+          <to>
+            <image>myimage</image>
+          </to>
+        </configuration>
+      </plugin>
+      ...
+    </plugins>
+  </build>
+  ...
+</project>
+
+And run the command;
+ mvn compile com.google.cloud.tools:jib-maven-plugin:3.1.4:dockerBuild
+```
+    
+    
     ## Docker Compose
     - Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application’s services. Then, with a single command, you create and start all the services from your configuration.
     - Compose works in all environments: production, staging, development, testing, as well as CI workflows.
