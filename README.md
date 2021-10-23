@@ -187,8 +187,7 @@ And run the command;
  mvn compile com.google.cloud.tools:jib-maven-plugin:3.1.4:dockerBuild
 ```
     
-    
-    ## Docker Compose
+## Docker Compose
     - Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application’s services. Then, with a single command, you create and start all the services from your configuration.
     - Compose works in all environments: production, staging, development, testing, as well as CI workflows.
     - Using Compose is basically a three-step process:
