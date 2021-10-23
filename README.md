@@ -203,7 +203,26 @@ And run the command;
 |`docker-compose up -f custom docker compose file name`|search the docker-compose-custom-file.yaml file and run the containers|
 |`up, restart, build, scale, stop, kill, logs, ps`||
 
-## Kubernetes K8s
+## Container Orchestration
+- Requirment - I have to 10 instances of miroservice A container, 15 instances of microservice B container
+- Typical Features;
+  - Auto Scaling - scale containers based on demand
+  - Service Discovery - Help microservices find one another
+  - Load Balancer - Distribute load among multiple instances of a microservice
+  - Self Healing - Do health checks and replace failing instances
+  - Zero Downtime Deployment - Release new version without downtime
+
+### Container Orchestration Options
+- AWS Specific
+  - AWS Elastic Container Service (ECS)
+  - AWS Fargate:Serverless version of AWS ECS
+
+- Cloud Neutral - Kubernetes
+  - AWS - Elastic Kubernetes Service(EKS)
+  - Azure - Azure Kubernetes Service(AKS)
+  - GCP - Google Kubernetes Engine(GKE)
+  - EKS & AKS does not have free tier!
+### Kubernetes K8s
 - in greek means Helmsman or Ship Pilot
 
 - Container Orchestration : Group containers to form a cluster
