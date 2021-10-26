@@ -222,6 +222,23 @@ And run the command;
   - Azure - Azure Kubernetes Service(AKS)
   - GCP - Google Kubernetes Engine(GKE)
   - EKS & AKS does not have free tier!
+
+#### Kubernetes Concepts
+- Cluster
+- Nodes
+- Pods
+- Containers
+- Deployments
+- Service
+- Replica Sets
+- Host of other features
+
+#### Google Cloud Concepts
+- Regions
+- Zones
+- Projects
+- Compute Engine
+- 
 ### Kubernetes K8s
 - in greek means Helmsman or Ship Pilot
 
