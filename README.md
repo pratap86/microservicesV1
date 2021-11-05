@@ -225,6 +225,7 @@ And run the command;
 
 #### Kubernetes Concepts
 - Cluster
+	- A Cluster is a combination of nodes a worker node(Run your application) as well as a master node(Manage your worker nodes)
 - Nodes
 - Pods
 - Containers
