@@ -223,16 +223,28 @@ And run the command;
   - GCP - Google Kubernetes Engine(GKE)
   - EKS & AKS does not have free tier!
 
-#### Kubernetes Concepts
+#### Kubernetes(KOO-BER-NET-EEZ) Concepts
 - Cluster
-	- A Cluster is a combination of nodes a worker node(Run your application) as well as a master node(Manage your worker nodes)
+	- A Cluster is a combination of nodes a worker node(Run your application) as well as a master node(Manage your worker nodes).
 - Nodes
+	- A Node is a vertual server
 - Pods
+	- A node contains multiple Pods while a Pod contains multiple containers.
 - Containers
 - Deployments
 - Service
 - Replica Sets
 - Host of other features
+
+#### K8S Deployment commands
+
+|Commands|Description|
+|`gcloud container clusters get-credentials pratap86-cluster --zone us-central1-c --project concise-display-286412`|To connect newly created cluster|
+|`kubectl create deployment hello-world-rest-api --image=in28min/hello-world-rest-api:0.0.1.RELEASE`|TO create a deployment|
+|`kubectl expose deployment hello-world-rest-api --type=LoadBalancer --port=8080`|exposed prev created deployment|
+|`kubectl get events`|displays events for creating a deployment|
+|`kubectl get pods -o wide`|display pod status with their IP|
+|`kubectl describe pod pod-name`|display pod description in details like Namespace, Annotations - Meta Info about Pod, Status|
 
 #### Google Cloud Concepts
 - Regions
