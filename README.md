@@ -239,7 +239,8 @@ And run the command;
 #### K8S Deployment commands
 
 |Commands|Description|
-|`gcloud container clusters get-credentials pratap86-cluster --zone us-central1-c --project concise-display-286412`|To connect newly created cluster|
+|---|---|
+|`gcloud container clusters get-credentials pratap86-cluster(cluster-name) --zone us-central1-c(zone) --project concise-display-286412(project-id)`|To connect newly created cluster|
 |`kubectl create deployment hello-world-rest-api --image=in28min/hello-world-rest-api:0.0.1.RELEASE`|TO create a deployment|
 |`kubectl expose deployment hello-world-rest-api --type=LoadBalancer --port=8080`|exposed prev created deployment|
 |`kubectl get events`|displays events for creating a deployment|
