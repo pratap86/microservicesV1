@@ -39,6 +39,8 @@
 |`currency-exchange`|http://localhost:8765/currency-exchange/from/USD/to/INR|
 |`currency-conversion`|http://localhost:8765/currency-conversion/from/USD/to/INR/quantity/10|
 
+### Monitoring microservices using Prometheus and Grafana
+
 # Curcuit Breaker
 - Microservice1 -> Microservice2 -> Microservice3 -> Microservice4 -> Microservice5
   - what if one of the above service is slow or down?
