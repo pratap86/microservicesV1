@@ -41,6 +41,18 @@
 
 ### @RefreshScope to refreshing proerties
 ### 12 Factors App
+1. Codebase
+2. Dependencies
+3. Config
+4. Backing Services
+5. Build, Run & Release
+6. Processes
+7. Port binding
+8. Concurrency
+9. Disposability
+10. Dev/Prod Parity
+11. Logs
+12. Admin Process
 ### Monitoring microservices using Prometheus and Grafana
 
 # Curcuit Breaker
