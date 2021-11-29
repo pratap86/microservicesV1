@@ -39,6 +39,8 @@
 |`currency-exchange`|http://localhost:8765/currency-exchange/from/USD/to/INR|
 |`currency-conversion`|http://localhost:8765/currency-conversion/from/USD/to/INR/quantity/10|
 
+### @RefreshScope to refreshing proerties
+### 12 Factors App
 ### Monitoring microservices using Prometheus and Grafana
 
 # Curcuit Breaker
