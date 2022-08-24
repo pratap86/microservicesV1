@@ -1,3 +1,5 @@
+## Definition
+<p>Microservices is an approach to developing a single application as a suite of small services, each running on its own process and communicating with light weight mechanisms(JSON), built around business capabilities and independently deployable by fully automated deployment machinery.</p>
 # Microservices with SpringBoot V2.4
 
 | Important updates||
